@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route("/")
 def hello_world():
-       return ('index.php')
+       return ("bienvenido - hola mundo ")
 
 
 @app.route('/lenguajes')
