@@ -11,7 +11,9 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route("/")
 def hello_world():
-       return "hola mundo"    
+       return ('index.php')
+
+
 @app.route('/lenguajes')
 def mostrarLenguajes():
     misLenguajes = ("PHP", "Python", "Java", "C#",
