@@ -1,4 +1,4 @@
-from flask import Flask,  Response
+from flask import Flask, Response
 import requests
 import json
 import logging
@@ -9,21 +9,11 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-@app.route('/')
-def principal():
-    return render_template('index.html')
 
+@app.route("/")
+def hello_world():
+    return "<h3><p>Hello, World!</p></h3>"
 
-@app.route('/lenguajes')
-def mostrarLenguajes():
-    misLenguajes = ("PHP", "Python", "Java", "C#",
-                    "JavaScript", "Perl", "Ruby", "Rust")
-    return render_template('lenguajes.html', lenguajes=misLenguajes)
-
-
-@app.route('/contacto')
-def contacto():
-    return render_template('contacto.html')
 
 @app.route("/get-price/<ticker>")
 def get_price(ticker):
@@ -61,6 +51,7 @@ def get_price(ticker):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5017)
+    app.run()
+
 
 
