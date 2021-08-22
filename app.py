@@ -1,4 +1,4 @@
-from flask import Flask, Response
+from flask import Flask, Response, render_template
 import requests
 import json
 import logging
@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route("/")
 def hello_world():
-     return render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route("/get-price/<ticker>")
