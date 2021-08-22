@@ -9,7 +9,9 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-
+@app.route("/")
+def hello_world():
+       return reden_template('index.html')
 
     
 @app.route('/lenguajes')
